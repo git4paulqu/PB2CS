@@ -1,0 +1,34 @@
+syntax = "proto2";
+package PB;
+
+import "Item.proto";
+
+// messssage Roleaa
+message Role
+{
+	optional uint32 uid = 1;
+	optional uint32 id = 2;
+	optional uint32 pos = 3;
+	optional uint32 group = 4;
+	repeated uint32 equips = 5;
+	optional EnumTest test = 6;
+	repeated AwardDescInBox itemTest = 7;
+	required uint32 testrequired = 8 [default = 100];
+	optional bool testrequired1 = 9 [default = false];
+};
+
+//
+//enssum aa
+enum EnumTest
+{
+	Role = 1;	
+	Master = 2;
+};
+
+//enssum aa
+enum EnumTestBB
+{
+	Role = 2;	
+	Master = 2;
+};
+

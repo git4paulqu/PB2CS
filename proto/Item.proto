@@ -1,0 +1,15 @@
+package PB;
+
+message AwardDescInBox
+{
+    optional int32 AwardId   = 2;
+    optional int32 AwardNum  = 3;
+    optional int32 AwardDurable = 4;
+};
+
+message AwardDesc2InBox
+{
+    optional int32 AwardId   = 2;
+    optional int32 AwardNum  = 3;
+    optional int32 AwardDurable = 4;
+}
