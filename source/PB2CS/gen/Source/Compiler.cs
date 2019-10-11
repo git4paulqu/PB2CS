@@ -22,7 +22,7 @@ namespace gen.Source
             parameters.IncludeDebugInformation = true;
             parameters.OutputAssembly = Options.FormatTempDLLPath;
             parameters.ReferencedAssemblies.Add("System.dll");
-            parameters.ReferencedAssemblies.Add("protobuf-net.dll");
+            parameters.ReferencedAssemblies.Add(Options.workPath + "protobuf-net.dll");
 
             string codepath = Options.tempCodePath;
 

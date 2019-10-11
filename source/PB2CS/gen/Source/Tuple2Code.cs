@@ -1,14 +1,10 @@
 ﻿using gen.Source.Structure;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace gen.Source
 {
     public class Tuple2Code
     {
-        public static string Parse(Tuple tuple, ObjectType type)
+        public static string Parse(Structure.Tuple tuple, ObjectType type)
         {
             if (type == ObjectType.ClassObject)
             {
@@ -22,7 +18,7 @@ namespace gen.Source
             return string.Empty;
         }
 
-        private static string ParseClass(Tuple tuple)
+        private static string ParseClass(Structure.Tuple tuple)
         {
             if (null == tuple)
             {
@@ -33,7 +29,7 @@ namespace gen.Source
             return string.Format("public {0} {1}{2};", tuple.typeString, tuple.name, defaultValue);
         }
 
-        private static string ParseEnum(Tuple tuple)
+        private static string ParseEnum(Structure.Tuple tuple)
         {
             if (null == tuple)
             {

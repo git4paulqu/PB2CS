@@ -29,7 +29,7 @@ namespace gen.Source
                 throw new Exception("input and output can not be null. please use -i:sourcepath, -o:outputpath..");
             }
 
-            string workPath = System.AppDomain.CurrentDomain.BaseDirectory;
+            workPath = System.AppDomain.CurrentDomain.BaseDirectory;
             string codetemplete = Utility.File.ReadStringByFile(workPath + "templete/code.templete");
             if (string.IsNullOrEmpty(codetemplete))
             {
@@ -66,6 +66,7 @@ namespace gen.Source
         public static string tempRootPath { get; private set; }
         public static string tempCodePath { get; private set; }
         public static string tempDLLPath { get; private set; }
+        public static string workPath { get; private set; }
 
         private static string dllName = "protocol.dll";
     }
